@@ -1,0 +1,28 @@
+compile
+javac -cp ".;mysql-connector-j-9.1.0.jar" MySQLExample.java
+
+run
+java -cp ".;mysql-connector-j-9.1.0.jar" MySQLExample
+
+db code 
+
+-- Step 1: Create the Database
+CREATE DATABASE employee_db;
+
+-- Step 2: Select the Database
+USE employee_db;
+
+-- Step 3: Create the Employees Table
+CREATE TABLE employees (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    position VARCHAR(50)
+);
+
+-- Step 4: Insert Data into the Table
+INSERT INTO employees (name, age, position)
+VALUES 
+    ('Alice', 30, 'Manager'),
+    ('Bob', 25, 'Developer'),
+    ('Charlie', 28, 'Designer');
